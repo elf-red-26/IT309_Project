@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+:root{
+    --main-color: rgba(128, 19, 23, 1);
+    --second-color: #edc233;
+}
+
+nav{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    color: var(--second-color);
+}
+
+nav .logo img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: var(--second-color);
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--second-color);
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+nav ul li .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--main-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a{
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown-content a:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+nav ul li:hover .dropdown-content{
+    display: block;
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+#homeSection .homeContent{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#homeSection .homeContent h1{
+    font-size: 2.5em;
+    color: var(--main-color);
+    margin-right: 20px;
+    text-shadow: 
+        -1px -1px 0 var(--second-color),  
+        1px -1px 0 var(--second-color),
+        -1px 1px 0 var(--second-color),
+        1px 1px 0 var(--second-color);
+}
+
+#homeSection .homeContent p{
+    font-size: 2em;
+    color: var(--second-color);
+    margin-bottom: 20px;
+    font-family: 'Oswald', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#homeSection .homeContent img{
+    padding-top: 20px;
+    width: 40%;
+    clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0 100%);
+}
