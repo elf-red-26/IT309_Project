@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Fellowship Baptist College</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/indexStyle.css">
     <link rel="icon" href="../assets/logo/fbc_new.png" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <h1 id="dateTime"></h1>
+        <div class="socialLinks">
+            <a href="https://www.facebook.com/fellowshipbaptistcollege/" target="_blank">
+                <i class="fab fa-facebook"></i> Fellowship Baptist College
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infofbcphilippines@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i> infofbcphilippines@gmail.com
+            </a>
+        </div>
+    </header>
+    
     <nav>
         <div class="logo">
             <img src="../assets/logo/fbc_new.png" alt="FBC Logo">
@@ -18,9 +31,9 @@
         <ul>
             <li><a href="#homeSection">Home</a></li>
             <li><a href="#aboutSection">About</a></li>
-            <li><a href="#contactSection">Contact</a></li>
+            <li><a href="#footerSection">Contact</a></li>
             <li class="dropdown">
-                <a href="#departmentsSection" class="dropbtn">Departments</a>
+                <a href="#departmentsSection" class="dropbtn">Departments &#9662;</a>
                 <div class="dropdown-content">
                     <a href="#">College of Engineering and Computer Studies</a>
                     <a href="#">College of Business and Accounting</a>
@@ -33,12 +46,38 @@
         <div class="homeContent">
             <img src="../assets/background/fbcBG.webp" alt="FBC background">
             <div class="homeText">
-                <h1>Fellowship Baptist College</h1>
-                <p>Shaping Lives...</p>
+                <h1 class="h1_gold">Fellowship Baptist College</h1>
+                <p class="p_gold">Shaping Lives...</p>
+                <p class="p_address">Rizal St., Kabankalan City, Negros Occidental, 6111</p>
             </div>
         </div>
     </section>
-    <section id="aboutSection"></section>
-    <section id="contactSection"></section>
+    <section id="aboutSection">
+        <h1 class="">About</h1>
+    </section>
+
+    <footer id="footerSection">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <div class="footer-contacts">
+                    <a href="https://www.facebook.com/fellowshipbaptistcollege/" target="_blank">
+                        <i class="fab fa-facebook"></i> Fellowship Baptist College
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infofbcphilippines@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i> infofbcphilippines@gmail.com
+                    </a>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Rizal St., Kabankalan City, Negros Occidental, 6111</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.4192943308144!2d122.81661158573944!3d9.985997385278388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac112f96a0db03%3A0x1bafa866d2eebab4!2sFellowship%20Baptist%20College!5e0!3m2!1sen!2sph!4v1738631636368!5m2!1sen!2sph" width="800px" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Fellowship Baptist College | Designed by IT309 Team
+        </div>
+    </footer>
+
+    <script src="../js/indexJs.js"></script>
 </body>
 </html>
