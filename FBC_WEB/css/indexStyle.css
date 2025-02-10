@@ -43,6 +43,7 @@ nav{
     position: fixed;
     top: 38px;
     left: 0;
+    border-radius: 5px;
     width: 100%;
     z-index: 999;
 }
@@ -146,13 +147,25 @@ section{
 
 #homeSection{
     background-color: var(--main-color);
-    padding-top: 130px;
+    padding-top: 110px;
+    position: relative;
+}
+
+#homeSection video{
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.6;
 }
 
 #homeSection .homeContent{
     display: flex;
     align-items: center;
     padding: 30px 25px;
+    position: absolute;
+    top: 30%;
+    right: 50%;
 }
 
 .h1_gold{
@@ -214,6 +227,75 @@ section{
     height: auto;
     aspect-ratio: 1 / 1;
     mix-blend-mode: color-burn;
+}
+
+#aboutSection {
+    padding-top: 130px;
+    background:url(../assets/logo/fbc_transparent.png) no-repeat center center/600px;
+}
+
+#aboutSection hr {
+    width: 100px;
+    border: 2px solid var(--main-color);
+    margin: 20px 0 0 30px;
+}
+
+.missionVision {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 40%;
+    min-width: 300px;
+    text-align: center;
+    background-color: rgba(128, 19, 23, 0.25);
+}
+
+.card h2,
+.history h2 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.history{
+    padding: 30px;
+}
+
+.historyContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.historyContent video {
+    max-width: 500px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.322);
+}
+
+.historyContent p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
 footer {

@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/indexStyle.css">
     <link rel="icon" href="../assets/logo/fbc_new.png" type="image/x-icon">
+
+    <script defer src="../js/loadPage.js"></script>
 </head>
 <body>
     <header>
@@ -29,12 +31,12 @@
             <h1>Fellowship Baptist College</h1>
         </div>
         <ul>
-            <li><a href="#homeSection">Home</a></li>
-            <li><a href="#aboutSection">About</a></li>
-            <li><a href="#footerSection">Contact</a></li>
+            <li><a href="#" onclick="loadPage('./home_page.html')">Home</a></li>
+            <li><a href="#" onclick="loadPage('./about_page.html')">About</a></li>
+            <li><a href="#" onclick="loadPage('../html/home_page.html')">Contact</a></li>
 
             <li class="dropdown">
-                <a href="#departmentsSection" class="dropbtn">Departments &#9662;</a>
+                <a href="#departmentsSection" onclick="loadPage('./home_page.html', '#departmentsSection')" class="dropbtn">Departments &#9662;</a>
 
                 <div class="dropdown-content">
                     <div class="dropdown">
@@ -81,27 +83,8 @@
             </li>
         </ul>
     </nav>
-    <section id="homeSection">
-        <div class="homeContent">
-            <img src="../assets/background/fbcBG.jpg" alt="FBC background">
-            <div class="homeText">
-                <h1 class="h1_gold">Fellowship Baptist College</h1>
-                <p class="p_gold">Shaping Lives...</p>
-                <p class="p_address">Rizal St., Kabankalan City, Negros Occidental, 6111</p>
-            </div>
-        </div>
-    </section>
-    <section id="departmentsSection">
-        <h1 class="">Departments</h1>
-        <p>Fellowship Baptist College composed of 5 Departments...</p>
-        <div class="dept-logos">
-            <img src="../assets/logo/cecs.png" alt="CECS Logo">
-            <img src="../assets/logo/cba.png" alt="CBA Logo">
-            <img src="../assets/logo/ccje.png" alt="CCJE Logo">
-            <img src="../assets/logo/cteas.png" alt="CTEAS Logo">
-            <img src="../assets/logo/ahc.png" alt="AHC Logo">
-        </div>
-    </section>
+    
+    <div id="content"></div>
 
     <footer id="footerSection">
         <div class="footer-content">
@@ -125,6 +108,6 @@
         </div>
     </footer>
 
-    <script src="../js/indexJs.js"></script>
+    <script src="../js/dateTime.js"></script>
 </body>
 </html>
