@@ -162,21 +162,22 @@ section{
 #homeSection .homeContent{
     display: flex;
     align-items: center;
-    padding: 30px 25px;
+    padding: 30px;
     position: absolute;
     top: 30%;
-    right: 50%;
+    /* right: 50%; */
+    width: 100%;
 }
 
 .h1_gold{
-    font-size: 3em;
+    font-size: 4em;
     color: var(--second-color);
     margin-right: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .p_gold{
-    font-size: 2em;
+    font-size: 3em;
     color: var(--second-color);
     margin-bottom: 20px;
     font-family: 'Oswald', cursive;
@@ -184,7 +185,7 @@ section{
 }
 
 .p_address{
-    font-size: 1em;
+    font-size: 1.5em;
     color: whitesmoke;
     margin-bottom: 20px;
     font-family: 'Oswald', cursive;
@@ -217,7 +218,7 @@ section{
 
 #departmentsSection .dept-logos{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 30px;
     padding: 30px;
@@ -231,7 +232,7 @@ section{
 
 #aboutSection {
     padding-top: 130px;
-    background:url(../assets/logo/fbc_transparent.png) no-repeat center center/600px;
+    background:url(../assets/logo/fbc_transparent.png) no-repeat center center/550px;
 }
 
 #aboutSection hr {
@@ -277,8 +278,8 @@ section{
 }
 
 .historyContent {
-    display: flex;
-    align-items: flex-start;
+    display: block;
+    /* align-items: flex-start; */
     gap: 20px;
 }
 
@@ -291,11 +292,31 @@ section{
 }
 
 .historyContent p {
-    color: #333;
-    font-size: 1em;
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 20px;
+}
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.top-button i {
+    font-size: 24px;
+}
+
+.top-button:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
 }
 
 footer {
@@ -341,4 +362,56 @@ footer {
 .footer-bottom {
     margin-top: 20px;
     font-size: 0.9em;
+}
+
+.footer-content img{
+    width: 200px;
+    height: auto;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    #homeSection .homeContent{
+        padding: 20px;
+    }
+
+    .h1_gold{
+        font-size: 2.2em;
+    }
+    
+    .p_gold{
+        font-size: 1.7em;
+    }
+    
+    .p_address{
+        font-size: 0.8em;
+    }
+
+    #departmentsSection{
+        padding-inline: 25px;
+    }
+
+    #departmentsSection h1{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    #departmentsSection p{
+        font-size: 0.9em;
+    }
+
+    #departmentsSection .dept-logos{
+        padding: 20px;
+    }
+
+    #departmentsSection .dept-logos img{
+        width: 140px;
+        margin: 15px;
+    }
+
+    .historyContent {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
