@@ -23,11 +23,11 @@ hr {
 }
 
 .ccje-logo {
-    background: url(../assets/logo/ccje.png) no-repeat center center/400px;
+    background: url(../assets/logo/ccje.png) no-repeat center center/300px;
 }
 
 .ahc-logo {
-    background: url(../assets/logo/ahc.png) no-repeat center center/400px;
+    background: url(../assets/logo/ahc.png) no-repeat center center/300px;
 }
 
 .cecs-color {
@@ -60,6 +60,10 @@ hr {
 
 .ahc-color {
     background-color: rgba(205, 22, 119, 1);
+}
+
+.ahc-purple {
+    background-color: rgba(167, 4, 208, 1);
 }
 
 .deptSection img {
