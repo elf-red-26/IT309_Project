@@ -1,0 +1,147 @@
+hr {
+    border: 5px dotted var(--main-color);
+}
+
+.deptSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130px;
+    padding-inline: 50px;
+}
+
+.cecs-logo {
+    background: url(../assets/logo/cecs.png) no-repeat center center/400px;
+}
+
+.cba-logo {
+    background: url(../assets/logo/cba2.png) no-repeat center center/400px;
+}
+
+.cteas-logo {
+    background: url(../assets/logo/cteas.png) no-repeat center center/250px;
+}
+
+.ccje-logo {
+    background: url(../assets/logo/ccje.png) no-repeat center center/300px;
+}
+
+.ahc-logo {
+    background: url(../assets/logo/ahc.png) no-repeat center center/300px;
+}
+
+.cecs-color {
+    background-color: rgba(247, 135, 33, 1);
+}
+
+.cecs-gray {
+    background-color: rgba(97, 99, 98, 1);
+}
+
+.cba-color {
+    background-color: rgba(234, 204, 25, 1);
+}
+
+.cba-purple {
+    background-color: rgba(51, 40, 68, 1);
+}
+
+.cteas-color {
+    background-color: rgba(0, 0, 254, 1);
+}
+
+.cteas-black {
+    background-color: rgba(31, 29, 32, 1);
+}
+
+.ccje-color {
+    background-color: var(--main-color);
+}
+
+.ahc-color {
+    background-color: rgba(205, 22, 119, 1);
+}
+
+.ahc-purple {
+    background-color: rgba(167, 4, 208, 1);
+}
+
+.deptSection img {
+    width: 450px;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.deptSection .deptName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    left: -250px;
+    padding-inline: 300px 200px;
+    margin-bottom: 50px;
+}
+
+.deptSection .deptName h1 {
+    font-size: 2em;
+    color: #f9f9f9;
+}
+
+.deptSection .dept-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    right: -250px;
+    padding-inline: 200px 300px;
+    margin-bottom: 50px;
+}
+
+.deptSection .dept-text p {
+    line-height: 1.5;
+    margin-block: 70px;
+    font-size: 1em;
+    color: #f9f9f9;
+}
+
+#coursesSection {
+    padding: 30px;
+    background-color: var(--second-color);
+}
+
+#coursesSection h1 {
+    color: var(--main-color);
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    text-shadow: 0 4px 8px rgba(128, 19, 23, 0.3),
+        0 6px 20px rgba(128, 19, 23, 0.3);
+}
+
+#coursesSection .courseContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(128, 19, 23, 0.5),
+        0 6px 20px rgba(128, 19, 23, 0.5);
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+}
+
+#coursesSection .courseContent h2 {
+    color: var(--main-color);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}

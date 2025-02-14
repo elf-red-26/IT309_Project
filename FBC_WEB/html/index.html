@@ -7,8 +7,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/indexStyle.css">
+    <link rel="stylesheet" href="../css/departmentsStyle.css">
+
     <link rel="icon" href="../assets/logo/fbc_new.png" type="image/x-icon">
+
+    <script defer src="../js/loadPage.js"></script>
 </head>
 <body>
     <header>
@@ -29,79 +34,64 @@
             <h1>Fellowship Baptist College</h1>
         </div>
         <ul>
-            <li><a href="#homeSection">Home</a></li>
-            <li><a href="#aboutSection">About</a></li>
-            <li><a href="#footerSection">Contact</a></li>
+            <li><a onclick="loadPage('./home_page.html', '#homeSection')">Home</a></li>
+            <li><a onclick="loadPage('./about_page.html', '#aboutSection')">About</a></li>
+            <li><a onclick="loadPage('./home_page.html', '#footerSection')">Contact</a></li>
 
             <li class="dropdown">
-                <a href="#departmentsSection" class="dropbtn">Departments &#9662;</a>
+                <a onclick="loadPage('./home_page.html', '#departmentsSection')" class="dropbtn">Departments &#9662;</a>
 
                 <div class="dropdown-content">
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">&#9666; College of Engineering and Computer Studies (CECS)</a>
+                        <a onclick="loadPage('./cecs_dept.html', '#cecsSection')" class="dropbtn">&#9666; College of Engineering and Computer Studies (CECS)</a>
                         <div class="dropdown-content">
-                            <a href="#">Bachelor of Science in Information Technology (BSIT)</a>
-                            <a href="#">Bachelor of Science in Computer Engineering (BSCpE)</a>
-                            <a href="#">Bachelor of Science in Electronics & Communications Engineering (BSECE)</a>
-                            <a href="#">Bachelor of Science in Civi Engineering (BSCE)</a>
-                            <a href="#">Bachelor of Library and Information Science (BLIS)</a>
+                            <a onclick="loadPage('./cecs_dept.html', '#bsitSection')">Bachelor of Science in Information Technology (BSIT)</a>
+                            <a onclick="loadPage('./cecs_dept.html', '#bscpeSection')">Bachelor of Science in Computer Engineering (BSCpE)</a>
+                            <a onclick="loadPage('./cecs_dept.html', '#bseceSection')">Bachelor of Science in Electronics & Communications Engineering (BSECE)</a>
+                            <a onclick="loadPage('./cecs_dept.html', '#bsceSection')">Bachelor of Science in Civi Engineering (BSCE)</a>
+                            <a onclick="loadPage('./cecs_dept.html', '#blisSection')">Bachelor of Library and Information Science (BLIS)</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">&#9666; College of Business and Accountancy (CBA);</a>
+                        <a onclick="loadPage('./cba_dept.html', '#cbaSection')">&#9666; College of Business and Accountancy (CBA);</a>
                         <div class="dropdown-content">
-                            <a href="#">Bachelor of Science in Hospitality Management (BSHM)</a>
-                            <a href="#">Bachelor of Science in Accounting (BSA)</a>
-                            <a href="#">Bachelor of Science in Business Administration (BSBA)</a>
+                            <a onclick="loadPage('./cba_dept.html', '#bshmSection')">Bachelor of Science in Hospitality Management (BSHM)</a>
+                            <a onclick="loadPage('./cba_dept.html', '#bsaSection')">Bachelor of Science in Accounting (BSA)</a>
+                            <a onclick="loadPage('./cba_dept.html', '#bsbaSection')">Bachelor of Science in Business Administration (BSBA)</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">&#9666; College of Teacher Education, Arts and Sciences (CTEAS)</a>
+                        <a onclick="loadPage('./cteas_dept.html', '#cteasSection')" class="dropbtn">&#9666; College of Teacher Education, Arts and Sciences (CTEAS)</a>
                         <div class="dropdown-content">
-                            <a href="#">Bachelor of Elementary Education (BEED)</a>
-                            <a href="#">Bachelor of Secondary Education (BSED)</a>
+                            <a onclick="loadPage('./cteas_dept.html', '#beedSection')">Bachelor of Elementary Education (BEED)</a>
+                            <a onclick="loadPage('./cteas_dept.html', '#bsedSection')">Bachelor of Secondary Education (BSED)</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">&#9666; Allied Health Colleges (AHC)</a>
+                        <a onclick="loadPage('./ahc_dept.html', '#ahcSection')" class="dropbtn">&#9666; Allied Health Colleges (AHC)</a>
                         <div class="dropdown-content">
-                            <a href="#">Bachelor of Science in Pharmacy (BSP)</a>
-                            <a href="#">Bachelor of Science in Radiologic Technology (BSRT)</a>
-                            <a href="#">Bachelor of Science in Medical Technology (BSMT)</a>
-                            <a href="#">Bachelor of Science in Midwifery (BSM)</a>
+                            <a onclick="loadPage('./ahc_dept.html', '#bspSection')">Bachelor of Science in Pharmacy (BSP)</a>
+                            <a onclick="loadPage('./ahc_dept.html', '#bsrtSection')">Bachelor of Science in Radiologic Technology (BSRT)</a>
+                            <a onclick="loadPage('./ahc_dept.html', '#bsmtSection')">Bachelor of Science in Medical Technology (BSMT)</a>
+                            <a onclick="loadPage('./ahc_dept.html', '#bsmidSection')">Bachelor of Science in Midwifery (BSMid)</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="#" class="dropbtn">&#9666; College of Criminal Justice Education (CCJE)</a>
+                        <a onclick="loadPage('./ccje_dept.html', '#ccjeSection')" class="dropbtn">&#9666; College of Criminal Justice Education (CCJE)</a>
                         <div class="dropdown-content">
-                            <a href="#">Bachelor of Science in Criminology (BSC)</a>
+                            <a onclick="loadPage('./ccje_dept.html', '#bscrimSection')">Bachelor of Science in Criminology (BSCrim)</a>
                         </div>
                     </div>
                 </div>
             </li>
         </ul>
     </nav>
-    <section id="homeSection">
-        <div class="homeContent">
-            <img src="../assets/background/fbcBG.jpg" alt="FBC background">
-            <div class="homeText">
-                <h1 class="h1_gold">Fellowship Baptist College</h1>
-                <p class="p_gold">Shaping Lives...</p>
-                <p class="p_address">Rizal St., Kabankalan City, Negros Occidental, 6111</p>
-            </div>
-        </div>
-    </section>
-    <section id="departmentsSection">
-        <h1 class="">Departments</h1>
-        <p>Fellowship Baptist College composed of 5 Departments...</p>
-        <div class="dept-logos">
-            <img src="../assets/logo/cecs.png" alt="CECS Logo">
-            <img src="../assets/logo/cba.png" alt="CBA Logo">
-            <img src="../assets/logo/ccje.png" alt="CCJE Logo">
-            <img src="../assets/logo/cteas.png" alt="CTEAS Logo">
-            <img src="../assets/logo/ahc.png" alt="AHC Logo">
-        </div>
-    </section>
+    
+    <div id="content"></div>
+
+    <div class="top-button">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <footer id="footerSection">
         <div class="footer-content">
@@ -118,6 +108,8 @@
                 <p><i class="fas fa-map-marker-alt"></i> Rizal St., Kabankalan City, Negros Occidental, 6111</p>
             </div>
 
+            <img src="../assets/logo/fbcLogo2.png" alt="">
+
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2336.4192943308144!2d122.81661158573944!3d9.985997385278388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac112f96a0db03%3A0x1bafa866d2eebab4!2sFellowship%20Baptist%20College!5e0!3m2!1sen!2sph!4v1738631636368!5m2!1sen!2sph" width="800px" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer-bottom">
@@ -125,6 +117,6 @@
         </div>
     </footer>
 
-    <script src="../js/indexJs.js"></script>
+    <script src="../js/dateTime.js"></script>
 </body>
 </html>

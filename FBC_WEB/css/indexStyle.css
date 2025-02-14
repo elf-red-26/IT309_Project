@@ -7,7 +7,7 @@
 }
 
 :root{
-    --main-color: rgba(128, 19, 23, 1);
+    --main-color: #801317;
     --second-color: #edc233;
 }
 
@@ -43,6 +43,7 @@ nav{
     position: fixed;
     top: 38px;
     left: 0;
+    border-radius: 5px;
     width: 100%;
     z-index: 999;
 }
@@ -146,24 +147,82 @@ section{
 
 #homeSection{
     background-color: var(--main-color);
-    padding-top: 130px;
+    padding-top: 110px;
+    position: relative;
+}
+
+#homeSection video{
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.6;
 }
 
 #homeSection .homeContent{
     display: flex;
     align-items: center;
-    padding: 30px 25px;
+    padding: 30px;
+    position: absolute;
+    top: 30%;
+    /* right: 50%; */
+    width: 100%;
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--computed-width);
+    }
+}
+
+/* @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid var(--second-color); */
+    width: 0;
+    font-size: inherit;  /* Ensures it keeps the parent's font size */
+    font-weight: inherit;
+    animation: typing 1s steps(var(--char-count), end) forwards;
+}
+
+/* Delay for each line */
+.h1_gold .typing {
+    --char-count: 28; /* Number of characters in "Fellowship Baptist College" */
+    --computed-width: calc(var(--char-count) * 0.85ch);
+}
+
+.p_gold .typing {
+    --char-count: 14; /* "Shaping Lives..." */
+    --computed-width: calc(var(--char-count) * 0.95ch);
+    animation-delay: 1s;
+}
+
+.p_address .typing {
+    --char-count: 45; /* "Rizal St., Kabankalan City, Negros Occidental, 6111" */
+    --computed-width: calc(var(--char-count) * 1ch);
+    animation-delay: 2.2s;
+}
+
+
 .h1_gold{
-    font-size: 3em;
+    font-size: 4em;
     color: var(--second-color);
     margin-right: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .p_gold{
-    font-size: 2em;
+    font-size: 3em;
     color: var(--second-color);
     margin-bottom: 20px;
     font-family: 'Oswald', cursive;
@@ -171,7 +230,7 @@ section{
 }
 
 .p_address{
-    font-size: 1em;
+    font-size: 1.5em;
     color: whitesmoke;
     margin-bottom: 20px;
     font-family: 'Oswald', cursive;
@@ -194,6 +253,7 @@ section{
 #departmentsSection{
     padding-top: 130px;
     padding-inline: 40px;
+    background:url(../assets/background/wave-bg.png) no-repeat center center/cover;
 }
 
 #departmentsSection h1{
@@ -204,7 +264,7 @@ section{
 
 #departmentsSection .dept-logos{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 30px;
     padding: 30px;
@@ -214,6 +274,129 @@ section{
     height: auto;
     aspect-ratio: 1 / 1;
     mix-blend-mode: color-burn;
+}
+
+#departmentsSection .dept-logos img:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#aboutSection {
+    padding-top: 130px;
+    background:url(../assets/logo/fbc_transparent.png) no-repeat center center/550px;
+}
+
+#aboutSection hr {
+    width: 100px;
+    border: 2px solid var(--main-color);
+    margin: 20px 0 0 30px;
+}
+
+#aboutSection .aboutContent{
+    display: flex;
+    padding-inline: 50px;
+}
+
+.mission-card, .vision-card {
+    background-color: var(--main-color);
+    color: #fff;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+    height: 200px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 150px;
+}
+
+.mission-card h2, .vision-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mission-card p, .vision-card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* .missionVision {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 40%;
+    min-width: 300px;
+    text-align: center;
+    background-color: rgba(128, 19, 23, 0.25);
+} */
+
+/* .card h2, */
+.history h2 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* .card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+} */
+
+.history{
+    padding: 30px;
+}
+
+.historyContent {
+    display: block;
+    /* align-items: flex-start; */
+    gap: 20px;
+}
+
+.historyContent video {
+    max-width: 500px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.322);
+}
+
+.historyContent p {
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.top-button i {
+    font-size: 24px;
+}
+
+.top-button:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
 }
 
 footer {
@@ -259,4 +442,56 @@ footer {
 .footer-bottom {
     margin-top: 20px;
     font-size: 0.9em;
+}
+
+.footer-content img{
+    width: 200px;
+    height: auto;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    #homeSection .homeContent{
+        padding: 20px;
+    }
+
+    .h1_gold{
+        font-size: 2.2em;
+    }
+    
+    .p_gold{
+        font-size: 1.7em;
+    }
+    
+    .p_address{
+        font-size: 0.8em;
+    }
+
+    #departmentsSection{
+        padding-inline: 25px;
+    }
+
+    #departmentsSection h1{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    #departmentsSection p{
+        font-size: 0.9em;
+    }
+
+    #departmentsSection .dept-logos{
+        padding: 20px;
+    }
+
+    #departmentsSection .dept-logos img{
+        width: 140px;
+        margin: 15px;
+    }
+
+    .historyContent {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
