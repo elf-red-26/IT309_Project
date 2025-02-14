@@ -7,7 +7,7 @@
 }
 
 :root{
-    --main-color: rgba(128, 19, 23, 1);
+    --main-color: #801317;
     --second-color: #edc233;
 }
 
@@ -169,6 +169,51 @@ section{
     width: 100%;
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--computed-width);
+    }
+}
+
+/* @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid var(--second-color); */
+    width: 0;
+    font-size: inherit;  /* Ensures it keeps the parent's font size */
+    font-weight: inherit;
+    animation: typing 1s steps(var(--char-count), end) forwards;
+}
+
+/* Delay for each line */
+.h1_gold .typing {
+    --char-count: 28; /* Number of characters in "Fellowship Baptist College" */
+    --computed-width: calc(var(--char-count) * 0.85ch);
+}
+
+.p_gold .typing {
+    --char-count: 14; /* "Shaping Lives..." */
+    --computed-width: calc(var(--char-count) * 0.95ch);
+    animation-delay: 1s;
+}
+
+.p_address .typing {
+    --char-count: 45; /* "Rizal St., Kabankalan City, Negros Occidental, 6111" */
+    --computed-width: calc(var(--char-count) * 1ch);
+    animation-delay: 2.2s;
+}
+
+
 .h1_gold{
     font-size: 4em;
     color: var(--second-color);
@@ -208,6 +253,7 @@ section{
 #departmentsSection{
     padding-top: 130px;
     padding-inline: 40px;
+    background:url(../assets/background/wave-bg.png) no-repeat center center/cover;
 }
 
 #departmentsSection h1{
@@ -230,6 +276,12 @@ section{
     mix-blend-mode: color-burn;
 }
 
+#departmentsSection .dept-logos img:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
 #aboutSection {
     padding-top: 130px;
     background:url(../assets/logo/fbc_transparent.png) no-repeat center center/550px;
@@ -241,7 +293,35 @@ section{
     margin: 20px 0 0 30px;
 }
 
-.missionVision {
+#aboutSection .aboutContent{
+    display: flex;
+    padding-inline: 50px;
+}
+
+.mission-card, .vision-card {
+    background-color: var(--main-color);
+    color: #fff;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+    height: 200px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 150px;
+}
+
+.mission-card h2, .vision-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mission-card p, .vision-card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* .missionVision {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -258,20 +338,20 @@ section{
     min-width: 300px;
     text-align: center;
     background-color: rgba(128, 19, 23, 0.25);
-}
+} */
 
-.card h2,
+/* .card h2, */
 .history h2 {
     color: var(--main-color);
     margin-bottom: 10px;
     font-size: 1.8em;
 }
 
-.card p {
+/* .card p {
     color: #333;
     font-size: 1em;
     line-height: 1.5;
-}
+} */
 
 .history{
     padding: 30px;
