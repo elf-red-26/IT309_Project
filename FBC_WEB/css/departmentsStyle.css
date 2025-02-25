@@ -66,13 +66,6 @@ hr {
     background-color: rgba(167, 4, 208, 1);
 }
 
-.deptSection img {
-    width: 450px;
-    float: left;
-    margin-right: 20px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .deptSection .deptName {
     display: flex;
     justify-content: center;
@@ -144,4 +137,54 @@ hr {
     color: var(--main-color);
     font-size: 1.5em;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .deptSection .deptName,
+    .deptSection .dept-text {
+        width: 90%;
+        height: auto;
+        position: relative;
+        padding-inline: 20px;
+        text-align: center;
+        clip-path: none;
+        left: 0;
+        right: 0;
+        margin: 20px auto;
+    }
+
+    .deptSection .deptName h1 {
+        font-size: 1.5em;
+        padding: 30px;
+    }
+
+    #coursesSection .courseContent {
+        padding: 20px;
+        height: auto;
+    }
+
+    .cecs-logo{
+        background-position:left 80px top 100px;
+        background-size: 260px;
+    }
+
+    .ccje-logo {
+        background-position: left 100px top 120px;
+        background-size: 220px;
+    }
+    
+    .cba-logo {
+        background-position: left 50px top 75px;
+        background-size: 330px;
+    }
+    
+    .cteas-logo {
+        background-position: left 120px top 130px;
+        background-size: 210px;
+    }
+    
+    .ahc-logo {
+        background-position: left 100px top 140px;
+        background-size: 230px;
+    }
 }

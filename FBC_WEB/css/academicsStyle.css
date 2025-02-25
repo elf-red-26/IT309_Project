@@ -1,0 +1,49 @@
+#academicsSection {
+    padding-top: 130px;
+    padding-inline: 30px;
+}
+
+#academicsSection h1 {
+    font-size: 2em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+#academicsSection .requirements-content ul li {
+    list-style-type: none;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    color: rgb(40, 36, 36);
+    position: relative;
+}
+
+#academicsSection .requirements-content ul li::before {
+    content: "\2713";
+    /* Unicode for check mark */
+    color: var(--second-color);
+    /* Color of the check mark */
+    font-weight: bold;
+    position: absolute;
+    left: -25px;
+    /* Adjust the position of the check mark */
+}
+
+.requirements-content {
+    display: flex;
+    justify-content: center;
+}
+
+.requirements-content .requirements-card {
+    width: 50%;
+    margin: 0 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.requirements-content .requirements-card h2{
+    font-size: 1em;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}

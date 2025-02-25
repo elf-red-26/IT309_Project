@@ -12,15 +12,129 @@
         </div>
     </div>
 </section>
+
 <section id="departmentsSection">
     <h1>Departments</h1>
     <p>Fellowship Baptist College composed of 5 Departments...</p>
-    <div class="dept-logos">
-        <a onclick="loadPage('./cecs_dept.html','#cecsSection')"><img src="../assets/logo/cecs.png" alt="CECS Logo"></a>
-        <a onclick="loadPage('./cba_dept.html','#cbaSection')"><img src="../assets/logo/cba.png" alt="CBA Logo"></a>
-        <a onclick="loadPage('./ccje_dept.html','#ccjeSection')"><img src="../assets/logo/ccje.png" alt="CCJE Logo"></a>
-        <a onclick="loadPage('./cteas_dept.html','#cteasSection')"><img src="../assets/logo/cteas.png"
-                alt="CTEAS Logo"></a>
-        <a onclick="loadPage('./ahc_dept.html','#ahcSection')"><img src="../assets/logo/ahc.png" alt="AHC Logo"></a>
+    <div class="dept-container">
+        <div class="dept-card">
+            <img src="../assets/logo/cecs.png" alt="CECS Logo">
+            <h2>College of Engineering and Computer Studies</h2>
+            <button onclick="loadPage('./cecs_dept.html','#cecsSection')">Learn More</button>
+        </div>
+        <div class="dept-card">
+            <img src="../assets/logo/cba.png" alt="CBA Logo">
+            <h2>College of Business Administration</h2>
+            <button onclick="loadPage('./cba_dept.html','#cbaSection')">Learn More</button>
+        </div>
+        <div class="dept-card">
+            <img src="../assets/logo/ccje.png" alt="CCJE Logo">
+            <h2>College of Criminal Justice Education</h2>
+            <button onclick="loadPage('./ccje_dept.html','#ccjeSection')">Learn More</button>
+        </div>
+        <div class="dept-card">
+            <img src="../assets/logo/cteas.png" alt="CTEAS Logo">
+            <h2>College of Teacher Education and Allied Sciences</h2>
+            <button onclick="loadPage('./cteas_dept.html','#cteasSection')">Learn More</button>
+        </div>
+        <div class="dept-card">
+            <img src="../assets/logo/ahc.png" alt="AHC Logo">
+            <h2>Allied Health Courses</h2>
+            <button onclick="loadPage('./ahc_dept.html','#ahcSection')">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<section id="eventsSection">
+    <div class="event-container">
+        <div class="recent-event-container">
+            <h1 class="recent-event">Recent Events</h1>
+            <div class="card-container">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/prisaack.webp" alt="Prisaack">
+                            <label for="event-label">Prisaacck - 2025</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Prisaacck is a competition between FBC, KCC, TCA, and FC.</h2>
+                            <p>Experience the excitement and thrill as students showcase their talents and skills in
+                                various events and competitions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/thanksgiving.webp" alt="Thanksgiving">
+                            <label for="event-label">Thanksgiving - 2024</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Thanksgiving is a time to reflect and give thanks for all the blessings received.</h2>
+                            <p>Join us in celebrating with gratitude and joy, as we come together to appreciate the good
+                                things in life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/christ-emphasis.webp" alt="christ-emphasis">
+                            <label for="event-label">Christ Emphasis - 2024</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Christ Emphasis Week is a time to focus on spiritual growth and renewal.</h2>
+                            <p>Participate in various activities and sessions designed to deepen your faith and
+                                strengthen your relationship with Christ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/music-n-arts.webp" alt="Music n Arts Fests">
+                            <label for="event-label">Music n Arts Fest - 2024</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Music n Arts Fest is a celebration of creativity and talent.</h2>
+                            <p>Join us for a showcase of musical performances and artistic displays, highlighting the diverse talents of our students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="upcoming-event-container">
+            <h1>Upcoming Events</h1>
+            <div class="card-container">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/college-spiritual-retreat.jpeg" alt="college-spiritual-retreat">
+                            <label for="event-label">College Spiritual - 2025</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>College Spiritual Retreat is a time for reflection and spiritual growth.</h2>
+                            <p>Join us for a weekend of worship, prayer, and fellowship, as we seek to deepen our faith and strengthen our community.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="../assets/events/founders.jpeg" alt="founders">
+                            <label for="event-label">Founders Day - 2024</label>
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Founders Day is a celebration of our college's history and achievements.</h2>
+                            <p>Join us in commemorating the legacy of our founders with various activities and events that honor their contributions and vision.</p>
+                            <a href="https://fb.watch/xXZ-5vjDSi/" target="_blank">&#9656; Click to see the event...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

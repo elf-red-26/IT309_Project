@@ -6,10 +6,10 @@
     <title>Fellowship Baptist College</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/indexStyle.css">
     <link rel="stylesheet" href="../css/departmentsStyle.css">
+    <link rel="stylesheet" href="../css/academicsStyle.css">
 
     <link rel="icon" href="../assets/logo/fbc_new.png" type="image/x-icon">
 
@@ -28,7 +28,7 @@
         </div>
     </header>
     
-    <nav>
+    <nav id="navbar">
         <div class="logo">
             <img src="../assets/logo/fbc_new.png" alt="FBC Logo">
             <h1>Fellowship Baptist College</h1>
@@ -36,12 +36,21 @@
         <ul>
             <li><a onclick="loadPage('./home_page.html', '#homeSection')">Home</a></li>
             <li><a onclick="loadPage('./about_page.html', '#aboutSection')">About</a></li>
+
+            <li class="dropdown">
+                <a onclick="loadPage('./academics_page.html', '#academicsSection')">Academics &#9662;</a>
+
+                <div class="dropdown-content acad-position">
+                    <a onclick="loadPage('./academics_page.html', '#academicsSection')">Admission</a>
+                </div>
+            </li>
+
             <li><a onclick="loadPage('./home_page.html', '#footerSection')">Contact</a></li>
 
             <li class="dropdown">
                 <a onclick="loadPage('./home_page.html', '#departmentsSection')" class="dropbtn">Departments &#9662;</a>
 
-                <div class="dropdown-content">
+                <div class="dropdown-content dept-position">
                     <div class="dropdown">
                         <a onclick="loadPage('./cecs_dept.html', '#cecsSection')" class="dropbtn">&#9666; College of Engineering and Computer Studies (CECS)</a>
                         <div class="dropdown-content">
@@ -85,6 +94,7 @@
                 </div>
             </li>
         </ul>
+
     </nav>
     
     <div id="content"></div>
@@ -118,5 +128,6 @@
     </footer>
 
     <script src="../js/dateTime.js"></script>
+    <script src="../js/menuToggle.js"></script>
 </body>
 </html>
