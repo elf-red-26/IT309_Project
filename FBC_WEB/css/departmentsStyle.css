@@ -131,6 +131,7 @@ hr {
         0 6px 20px rgba(128, 19, 23, 0.5);
     margin-bottom: 20px;
     scroll-margin-top: 100px;
+    text-align: justify;
 }
 
 #coursesSection .courseContent h2 {
@@ -161,30 +162,31 @@ hr {
     #coursesSection .courseContent {
         padding: 20px;
         height: auto;
+        scroll-margin-top: -130px;
     }
 
     .cecs-logo{
-        background-position:left 80px top 100px;
+        background-position:left 90px top 180px;
         background-size: 260px;
     }
 
     .ccje-logo {
-        background-position: left 100px top 120px;
+        background-position: left 100px top 200px;
         background-size: 220px;
     }
     
     .cba-logo {
-        background-position: left 50px top 75px;
+        background-position: left 50px top 155px;
         background-size: 330px;
     }
     
     .cteas-logo {
-        background-position: left 120px top 130px;
+        background-position: left 120px top 200px;
         background-size: 210px;
     }
     
     .ahc-logo {
-        background-position: left 100px top 140px;
+        background-position: left 100px top 200px;
         background-size: 230px;
     }
 }

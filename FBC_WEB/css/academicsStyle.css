@@ -19,13 +19,10 @@
 
 #academicsSection .requirements-content ul li::before {
     content: "\2713";
-    /* Unicode for check mark */
     color: var(--second-color);
-    /* Color of the check mark */
     font-weight: bold;
     position: absolute;
     left: -25px;
-    /* Adjust the position of the check mark */
 }
 
 .requirements-content {
@@ -46,4 +43,32 @@
     font-size: 1em;
     color: var(--main-color);
     margin-bottom: 20px;
+}
+
+@media screen and (max-width:468px){
+    #academicsSection{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    #academicsSection h1{
+        font-size: 1.5em;
+    }
+
+    .requirements-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .requirements-content .requirements-card{
+        width: 90%;
+    }
+
+    .requirements-content .requirements-card h2{
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    #academicsSection .requirements-content ul li {
+        font-size: 0.8em;
+    }
 }
