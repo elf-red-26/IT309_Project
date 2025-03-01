@@ -1,22 +1,21 @@
 #academicsSection {
     padding-top: 130px;
-    padding-inline: 30px;
+    padding-bottom: 50px;
 }
-
 #academicsSection h1 {
     font-size: 2em;
     color: var(--main-color);
     margin-bottom: 20px;
 }
-
-#academicsSection .requirements-content ul li {
+#academicsSection .requirements-content .requirements-list {
     list-style-type: none;
     margin-left: 40px;
     margin-bottom: 10px;
     color: rgb(40, 36, 36);
     position: relative;
+    font-style: italic;
+    line-height: 30px;
 }
-
 #academicsSection .requirements-content ul li::before {
     content: "\2713";
     color: var(--second-color);
@@ -24,12 +23,10 @@
     position: absolute;
     left: -25px;
 }
-
 .requirements-content {
     display: flex;
     justify-content: center;
 }
-
 .requirements-content .requirements-card {
     width: 50%;
     margin: 0 20px;
@@ -38,37 +35,194 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
 }
-
-.requirements-content .requirements-card h2{
-    font-size: 1em;
+.requirements-content .requirements-card h2 {
+    font-size: 1.3em;
     color: var(--main-color);
     margin-bottom: 20px;
 }
-
-@media screen and (max-width:468px){
-    #academicsSection{
+.requirements-card h3 {
+    font-size: 1.1em;
+    color: grey;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.step {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.procedure {
+    font-size: 0.8em;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 15px;
+}
+.toggle-btn {
+    display: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
+.toggle-btn::after {
+    content: " ▼"; /* Downward arrow */
+    font-size: 0.8em;
+}
+.office {
+    font-size: 0.8em;
+    text-align: right;
+}
+.mid-arrow {
+    width: 5.5px;
+    height: 5.5px;
+    border-top: 2px solid var(--second-color);
+    border-right: 2px solid var(--second-color);
+    transform: rotate(45deg);
+    margin: 2px 20px;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7.5px solid var(--second-color);
+    margin: 2.5px auto;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        max-height: 100%; /* Adjust based on content */
+        transform: scaleY(1);
+    }
+}
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        max-height: 100%;
+        transform: scaleY(1);
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
+        transform: scaleY(0);
+    }
+}
+.flowchart.show {
+    display: flex;
+    flex-direction: column;
+    animation: slideDown 0.5s ease-out forwards;
+}
+.flowchart.hide {
+    animation: slideUp 0.5s ease-out forwards;
+}
+@media screen and (max-width: 768px) {
+    #academicsSection {
         padding-top: 100px;
         padding-bottom: 50px;
     }
-    #academicsSection h1{
+    #academicsSection h1 {
         font-size: 1.5em;
     }
-
     .requirements-content {
         flex-direction: column;
         gap: 30px;
     }
-
-    .requirements-content .requirements-card{
+    .requirements-content .requirements-card {
         width: 90%;
+        padding: 5px;
     }
-
-    .requirements-content .requirements-card h2{
-        font-size: 0.9em;
+    .requirements-content .requirements-card h2 {
+        font-size: 1em;
         margin-bottom: 10px;
     }
-
+    .requirements-content .requirements-card h3 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
     #academicsSection .requirements-content ul li {
         font-size: 0.8em;
+    }
+    .toggle-btn {
+        display: block; /* Show button */
+    }
+
+    .flowchart {
+        display: none;
+        overflow: hidden;
+        max-height: 0;
+        transform-origin: top;
+    }
+}
+@media screen and (max-width:468px) {
+    #academicsSection {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        padding-inline: 5px;
+    }
+    #academicsSection h1 {
+        font-size: 1.5em;
+    }
+    .requirements-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .requirements-content .requirements-card {
+        width: 90%;
+        padding: 5px;
+    }
+    .requirements-content .requirements-card h2 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    .requirements-content .requirements-card h3 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    #academicsSection .requirements-content ul li {
+        font-size: 0.8em;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    .flowchart {
+        display: none;
+        overflow: hidden;
+        max-height: 0;
+        transform-origin: top;
     }
 }

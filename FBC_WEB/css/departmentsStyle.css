@@ -140,7 +140,7 @@ hr {
     margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .deptSection .deptName,
     .deptSection .dept-text {
         width: 90%;
@@ -188,5 +188,58 @@ hr {
     .ahc-logo {
         background-position: left 100px top 200px;
         background-size: 230px;
+    }
+
+    #coursesSection .courseContent h2 {
+        font-size: 1.2em;
+    }
+
+    #coursesSection .courseContent p{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width:468px){
+    .deptSection{
+        flex-direction: column;
+    }
+    .deptSection .deptName{
+        padding-inline: 10px;
+    }
+    .deptSection .dept-text{
+        padding-inline: 10px;
+    }
+    .deptSection .deptName h1 {
+        font-size: 1.1em;
+    }
+    .deptSection .dept-text p {
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .cecs-logo,.cba-logo,.cteas-logo,.ccje-logo,.ahc-logo{
+        background-position:left 50% top 10%;
+    }
+    .cecs-logo{
+        background-size: 170px;
+    }
+    .cba-logo{
+        background-size: 220px;
+    }
+    .cteas-logo{
+        background-size: 130px;
+    }
+    .ahc-logo{
+        background-size: 150px;
+    }
+    .ccje-logo{
+        background-size: 137px;
+    }
+
+    #coursesSection .courseContent h2 {
+        font-size: 1em;
+    }
+    #coursesSection .courseContent p{
+        font-size: 0.7em;
     }
 }
