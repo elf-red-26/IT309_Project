@@ -1,0 +1,114 @@
+#administrationSection{
+    padding-inline: 50px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.admin-container, 
+.trustees-container{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 50px;
+    gap: 20px;
+    padding-top: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 0 20px;
+}
+
+.admin-list h1,
+.trustees-list h1{
+    font-size: 1.5em;
+    color: var(--main-color);
+}
+
+.admin-item,
+.trustee-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.admin-item:hover,
+.trustee-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-item h2,
+.trustee-item h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.admin-item p,
+.trustee-item p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.admin-item img,
+.trustee-item img {
+    width: 50px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #8a868667;
+}
+@media screen and (max-width:768px){
+    #administrationSection{
+        padding-inline: 20px;
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
+    .admin-container,
+    .trustees-container {
+        padding-inline: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    .admin-item img,
+    .trustee-item img {
+        width: 40px;
+    }
+    .admin-item h2,
+    .trustee-item h2 {
+        font-size: 16px;
+    }
+    .admin-item p,
+    .trustee-item p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:468px){
+    #administrationSection{
+        padding-inline: 20px;
+        padding-bottom: 20px;
+    }
+    .admin-container,
+    .trustees-container {
+        padding-inline: 20px;
+    }
+    .admin-item img,
+    .trustee-item img {
+        width: 40px;
+    }
+    .admin-item h2,
+    .trustee-item h2 {
+        font-size: 16px;
+    }
+    .admin-item p,
+    .trustee-item p {
+        font-size: 14px;
+    }
+}

@@ -762,7 +762,7 @@ footer {
 @media screen and (max-width:468px) {
     header{display: none;}
 
-    nav{top: 10px;}
+    nav{top: 0;}
 
     nav .menu-toggle {
         display: block;
@@ -810,7 +810,7 @@ footer {
         font-size: 0.75em;
         text-align: left;
     }
-
+    #homeSection{padding-top: 60px;}
     #homeSection .homeContent{padding: 0;}
 
     #homeSection .homeText{
@@ -867,5 +867,9 @@ footer {
 
     .historyContent p{
         font-size: 0.8em;
+    }
+
+    footer{
+        margin-top: 50px;
     }
 }

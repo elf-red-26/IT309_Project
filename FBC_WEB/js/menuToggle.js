@@ -30,3 +30,33 @@ function toggleProcedure(button) {
         flowchart.classList.add("show");
     }
 }
+
+// Handle hash navigation
+let lastScrollTop = 0;
+function handleScroll() {
+    const courses = document.querySelectorAll(".courseContent");
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const screenHeight = window.innerHeight;
+
+    courses.forEach((course, index) => {
+        const coursePosition = course.getBoundingClientRect().top;
+
+        if (st > lastScrollTop) {
+            // Scrolling down
+            if (coursePosition < screenHeight * 0.80) {
+                course.classList.add("show");
+                course.classList.remove("hide");
+            }
+        } else {
+            // Scrolling up
+            if (coursePosition > screenHeight * 0.75) {
+                course.classList.add("hide");
+                course.classList.remove("show");
+            }
+        }
+    });
+
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}
+
+window.addEventListener("scroll", handleScroll);

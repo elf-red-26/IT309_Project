@@ -140,6 +140,50 @@ hr {
     margin-bottom: 30px;
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.courseContent{
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.courseContent:nth-child(odd) {
+    transform: translateX(-100px);
+}
+
+.courseContent:nth-child(even) {
+    transform: translateX(100px);
+}
+
+.courseContent.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.courseContent.hide {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+
 @media screen and (max-width: 768px) {
     .deptSection .deptName,
     .deptSection .dept-text {

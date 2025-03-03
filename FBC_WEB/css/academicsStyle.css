@@ -1,6 +1,7 @@
 #academicsSection {
     padding-top: 130px;
     padding-bottom: 50px;
+    padding-inline: 25px;
 }
 #academicsSection h1 {
     font-size: 2em;
